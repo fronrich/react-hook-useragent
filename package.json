@@ -1,0 +1,32 @@
+{
+  "name": "@fronrich/react-hook-useragent",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "git+https://github.com/fronrich/react-hook-useragent.git"
+  },
+  "description": "Powered by 3rd-Eden/useragent. A high performance user agent parser hook for React.",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "typescript": "^5.7.3",
+    "useragent": "^2.3.0"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "headless",
+    "frontend",
+    "useragent",
+    "browser"
+  ],
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/useragent": "^2.3.4",
+    "react": "^19.0.0",
+    "typescript": "^5.7.3",
+    "useragent": "^2.3.0"
+  }
+}
