@@ -1,4 +1,8 @@
-# React UserAgent Hook
+# React Hook UserAgent
+
+[![npm version](https://img.shields.io/npm/v/react-hook-useragent.svg)](https://www.npmjs.com/package/react-hook-useragent)
+[![License: MIT](https://img.shields.io/npm/l/react-hook-useragent.svg)](https://opensource.org/licenses/MIT)
+[![React Version](https://img.shields.io/badge/React-%5E16.8.0%20%7C%20%5E17.0.0%20%7C%20%5E18.0.0%20%7C%20%5E19.0.0-blue.svg)](https://reactjs.org/)
 
 A custom React hook for parsing and retrieving user agent information using the [useragent](https://github.com/3rd-Eden/useragent) library.
 
@@ -11,7 +15,7 @@ This hook leverages the browser's `navigator.userAgent` property to provide deta
 Install the package via npm:
 
 ```bash
-npm install react-useragent-hook
+npm install react-hook-useragent
 ```
 
 Since this package is a React hook, ensure that you have React installed in your project. This package also declares React as a peer dependency:
@@ -26,7 +30,7 @@ After installation, import and use the hook in your React components:
 
 ```jsx
 import React from "react";
-import useUserAgent from "react-useragent-hook";
+import useUserAgent from "react-hook-useragent";
 
 function App() {
   const { family, major, minor, patch, os, device } = useUserAgent();
