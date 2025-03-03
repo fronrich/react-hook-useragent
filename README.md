@@ -33,19 +33,15 @@ import React from "react";
 import useUserAgent from "react-hook-useragent";
 
 function App() {
-  const { family, major, minor, patch, os, device } = useUserAgent();
+  const { browser, os } = useUserAgent();
 
   return (
     <div>
-      <h1>User Agent Details</h1>
       <p>
-        <strong>Browser:</strong> {family} {major}.{minor}.{patch}
+        <strong>Browser:</strong> {browser}
       </p>
       <p>
-        <strong>Operating System:</strong> {os && os.toString()}
-      </p>
-      <p>
-        <strong>Device:</strong> {device && device.toString()}
+        <strong>Operating System:</strong> {os}
       </p>
     </div>
   );
@@ -57,14 +53,14 @@ export default App;
 ## How It Works
 
 - **Retrieving the UA String:**  
-  The hook accesses `navigator.userAgent` to obtain the browser's user agent string.
+  The hook accesses `navigator.userAgent` to obtain the browser's user agent information.
 
 - **Performance Optimization:**  
   The hook uses `useMemo` to ensure that the parsing computation is performed only when the user agent string changes.
 
 ## API
 
-The hook returns an string representing the useragent.
+The hook returns an object representing the useragent. Extrapolate information such as browser, os, device, cpu, engine
 
 ## Contributing
 

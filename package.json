@@ -1,6 +1,6 @@
 {
   "name": "react-hook-useragent",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "module": "index.ts",
   "type": "module",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "peerDependencies": {
     "react": "^19.0.0",
     "typescript": "^5.7.3",
-    "useragent": "^2.3.0"
+    "ua-parser-js": "^2.0.2"
   },
   "keywords": [
     "react",
