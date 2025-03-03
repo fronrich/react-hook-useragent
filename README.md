@@ -60,7 +60,99 @@ export default App;
 
 ## API
 
-The hook returns an object representing the useragent. Extrapolate information such as browser, os, device, cpu, engine
+The hook returns an object representing the useragent. Extrapolate information such as browser, os, device, cpu, engine. Below is the Typescript interface for the return object
+
+### TypeScript Interface
+
+```typescript
+interface UserAgentInfo {
+  /**
+   * The full User-Agent string.
+   */
+  ua: string;
+
+  /**
+   * Information about the browser.
+   */
+  browser: {
+    /**
+     * The name of the browser, e.g., "Chrome", "Firefox".
+     */
+    name: string;
+
+    /**
+     * The full version string of the browser.
+     */
+    version: string;
+
+    /**
+     * The major version number, often used for compatibility checks.
+     */
+    major: string;
+  };
+
+  /**
+   * Information about the CPU.
+   */
+  cpu: {
+    /**
+     * CPU architecture, e.g., "amd64", "arm64".
+     */
+    architecture: string;
+  };
+
+  /**
+   * Information about the device.
+   * This is often empty for non-mobile devices.
+   */
+  device: {
+    /**
+     * Device model, if detected. May be absent on desktop platforms.
+     */
+    model?: string;
+
+    /**
+     * Device type, e.g., "mobile", "tablet", "desktop". May be absent on desktop platforms.
+     */
+    type?: string;
+
+    /**
+     * Device vendor, e.g., "Samsung", "Apple". May be absent on desktop platforms.
+     */
+    vendor?: string;
+  };
+
+  /**
+   * Information about the rendering engine.
+   */
+  engine: {
+    /**
+     * The name of the rendering engine, e.g., "Blink", "Gecko".
+     */
+    name: string;
+
+    /**
+     * The version of the rendering engine.
+     */
+    version: string;
+  };
+
+  /**
+   * Information about the operating system.
+   */
+  os: {
+    /**
+     * The name of the operating system, e.g., "Linux", "Windows".
+     */
+    name: string;
+
+    /**
+     * (Optional) The version of the operating system, if available.
+     */
+    version?: string;
+  };
+}
+```
 
 ## Contributing
 
