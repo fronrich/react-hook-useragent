@@ -8,7 +8,7 @@ A custom React hook for parsing and retrieving user agent information using the 
 
 ## Overview
 
-This hook leverages the browser's `navigator.userAgent` property to provide detailed information about the current browser, its version, operating system, and device. It uses the high-performance `useragent` parser under the hood and memoizes the result to optimize performance in React applications.
+This hook leverages the browser's `navigator.userAgent` property to provide detailed information about the current browser, its version, operating system, and device. It memoizes the result to optimize performance in React applications.
 
 ## Installation
 
@@ -59,25 +59,12 @@ export default App;
 - **Retrieving the UA String:**  
   The hook accesses `navigator.userAgent` to obtain the browser's user agent string.
 
-- **Parsing the User Agent:**  
-  It uses the `useragent.parse` method to convert the UA string into an object containing properties such as `family`, `major`, `minor`, `patch`, along with operating system (`os`) and device (`device`) information.
-
 - **Performance Optimization:**  
   The hook uses `useMemo` to ensure that the parsing computation is performed only when the user agent string changes.
 
 ## API
 
-The hook returns an object with the following properties:
-
-- **family**: _string_ — The browser family (e.g., "Chrome", "Firefox").
-- **major**: _number_ — The major version of the browser.
-- **minor**: _number_ — The minor version of the browser.
-- **patch**: _number_ — The patch version of the browser.
-- **os**: _object_ — Contains operating system information with helper methods:
-  - `os.toString()`: Returns a string representation of the OS.
-  - `os.toVersion()`: Returns the OS version.
-- **device**: _object_ — Contains device information (if available) with:
-  - `device.toString()`: Returns a string representation of the device.
+The hook returns an string representing the useragent.
 
 ## Contributing
 
